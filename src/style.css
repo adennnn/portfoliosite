@@ -1,0 +1,74 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+
+
+.section
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-family: 'Cabin', sans-serif;
+    color: #ffeded;
+    text-transform: uppercase;
+    font-size: 7vmin;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+section:nth-child(odd)
+{
+    justify-content: flex-end;
+}
+
+
+
+.clock {
+    
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    
+    
+    letter-spacing: 7px;
+   
+
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+            p{
+                display: inline;
+                margin: 5px;
+            }
+        
+            #time{
+                font-size: 60px;
+                color: #004AAD;
+            }
+        
+            #day{
+                font-size: 40px;
+                color: #FF5757;
+            }
+        
+            #date{
+                font-size:20px;
+                color: #FF5757;
+            }
+            div{
+                font-family: 'Fredoka One', cursive;
+            }
