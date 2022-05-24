@@ -51,3 +51,26 @@ section:nth-child(odd)
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+            p{
+                display: inline;
+                margin: 5px;
+            }
+
+            #time{
+                font-size: 60px;
+                color: #004AAD;
+            }
+
+            #day{
+                font-size: 40px;
+                color: #FF5757;
+            }
+
+            #date{
+                font-size:20px;
+                color: #FF5757;
+            }
+            div{
+                font-family: 'Fredoka One';
+            }
