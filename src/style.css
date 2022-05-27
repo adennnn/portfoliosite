@@ -1,76 +1,195 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family:arial;
-}
+body, html, #app {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+  }
+  
+ #app canvas {
+	display: block;
+	position: fixed;
+	z-index: -20;
+	top: 0;
+  }
+  
+  .typing.animate {
+	width: 21ch;
+	border-right: 0.1em solid black;
+	font-family: monospace;
+	font-size: 2em;
+	animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(5) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+  }
+  
+  .typing.animate::before { 
+	content: "Hello, I'm adecivbupo";
+	animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+  }
+  
+  @keyframes type {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 21ch;
+	}
+  }
+  
+  @keyframes type2 {
+	from {
+	  width: 16ch;
+	  content: "Hello, I'm Aden. "
+	}
+	to {
+	  width: 20ch;
+	  content: ""
+	}
+  }
+  
+  
+  
+  @keyframes writer {
+	50% {
+	  border-color: transparent;
+	}
+  }
+  
+  @keyframes delete {
+	from {
+	  width: 21ch;
+	}
+	to {
+	  width: 16ch;
+	}
+  }
 
 
-.webgl
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}
+  .dotted {
+	text-decoration-style: dotted;
+  }
+
+  .wavy {
+	text-decoration-style: wavy;
+  }
+
+  .box {
+    justify-content: center;
+    width: 100%;
+    margin: 1rem auto;
+  }
 
 
 
-
-.section
-{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    font-family: 'Cabin', sans-serif;
-    color: #ffeded;
-    text-transform: uppercase;
-    font-size: 7vmin;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-section:nth-child(odd)
-{
-    justify-content: flex-end;
-}
-
-
-
-.clock {
-    
-    position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-    
-    
-    letter-spacing: 7px;
-   
-
-
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-            p{
-                display: inline;
-                margin: 5px;
-            }
-
-            #time{
-                font-size: 60px;
-                color: #004AAD;
-            }
-
-            #day{
-                font-size: 40px;
-                color: #FF5757;
-            }
-
-            #date{
-                font-size:20px;
-                color: #FF5757;
-            }
-            div{
-                font-family: 'Fredoka One';
-            }
+  
+  .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 90vw;
+	margin: 2rem auto;
+  }
+  
+  .box {
+	width: 20%;
+	padding: 5px;
+  }
+  
+  h2 {
+	line-height: 2.5; /* increased line-height so that text-decoration thickness is unaffected */
+  }
+  
+  p {
+	font-family: monospace;
+  }
+  
+  .underline {
+	text-decoration: underline;
+	text-decoration-color: #dd6ff8;
+  }
+  
+  .solid {
+	text-decoration-style: solid;
+  }
+  
+  .dotted {
+	text-decoration-style: dotted;
+  }
+  
+  .dashed {
+	text-decoration-style: dashed;
+  }
+  
+  .wavy {
+	text-decoration-style: wavy;
+  }
+  
+  .overline {
+	text-decoration-line: overline;
+	text-decoration-color: #dd6ff8;
+  }
+  
+  .underline-overline {
+	text-decoration-line: underline overline;
+	text-decoration-color: #dd6ff8;
+  }
+  
+  .line-through {
+	text-decoration: line-through;
+	text-decoration-color: #dd6ff8;
+  }
+  
+  .thickness {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .thin {
+	text-decoration-thickness: 1.5px;
+  }
+  
+  .normal {
+	 text-decoration-thickness: 2.5px;
+  }
+  
+  .thick {
+	text-decoration-thickness: 6px;
+  }
+  
+  .underline-offset {
+	justify-content: center;
+	display: flex;
+  }
+  
+  .double {
+	text-decoration-style: double;
+  }
+  
+  .offset {
+	text-underline-offset: 4px;
+  }
+  
+  .wavy.offset{
+	text-underline-offset: 8px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.container {
+	  width: 100vw;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	}
+	
+	.box {
+	  justify-content: center;
+	  width: 100%;
+	  margin: 1rem auto;
+	}
+	
+	.thickness, .underline-offset {
+	  flex-direction: column;
+	}
+  }
+  
